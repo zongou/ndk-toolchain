@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -eu
+set -u
 
 RED='\033[91m'
 DEF='\033[0m'
