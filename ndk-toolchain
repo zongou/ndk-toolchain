@@ -44,7 +44,6 @@ validate_gcc_version() {
 }
 
 main() {
-	echo $#
     if test $# -ne 3; then
         exit_error_msg "Usage: ./$(basename "$0") [patch] <path to the Android NDK> <Android SDK version> <target architecture>"
     fi
@@ -130,6 +129,9 @@ main() {
     else
 		export FILE_OFFSET_BITS="NO"
     fi
+
+    # configure --host
+    export HOST=${TOOLCHAIN_PREFIX}${ANDROID_SDK_VERSION}
 }
 
 main "$@"
