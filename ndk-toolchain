@@ -89,7 +89,7 @@ main() {
         ;;
     esac
 
-    # validate_gcc_version
+    validate_gcc_version
 
     msg "\033[92mInfo: \033[0mConfiguring for ${DEST_CPU} ..."
 
