@@ -131,7 +131,7 @@ main() {
     fi
 
     # configure --host
-    export HOST=${TOOLCHAIN_PREFIX}${ANDROID_SDK_VERSION}
+    export HOST="${TOOLCHAIN_PREFIX}${ANDROID_SDK_VERSION}"
 }
 
 main "$@"
