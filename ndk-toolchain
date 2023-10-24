@@ -115,12 +115,14 @@ main() {
 
     export CFLAGS=" -I${ANDROID_NDK_HOME}/sources/android/cpufeatures"
 
+    # for building nodejs
     export GYP_DEFINES="\
     target_arch=${TARGET_ARCH} \
     v8_target_arch=${TARGET_ARCH} \
     android_target_arch=${TARGET_ARCH} \
     host_os=${HOST_OS} \
-    OS=android"
+    OS=android \
+    android_ndk_path=${ANDROID_NDK_HOME}"
 
 	# sub arch pre5, api 16, FILE_OFFSET_BITS="NO"
 	# not configured to supporte pre5 yet
